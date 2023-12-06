@@ -1,0 +1,341 @@
+/* General Styles */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background-image: url("imagenes/HCfU2.png");
+        
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 110px;
+    display: flex; /* Agregamos un display:flex al body para utilizar flexbox */
+    flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
+    min-height: 100vh; /* Establece la altura mínima del cuerpo al 100% del viewport height */
+}
+
+
+/* Header */
+.title h1 {
+    padding: 20px 0;
+    text-align: center;
+    font-size: 1.9rem;
+}
+
+/* CONTAINER */
+.container {
+    width: 150%;
+    max-width: 1000px;
+    margin: 1.6em auto;
+    display: grid;
+    gap: 1.6em;
+    /* grid-template-columns: repeat(4, 1fr) 3%; */
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.container > .header,
+.container > .content,
+.container > .sidebar,
+.container > .footer,
+.container > div{
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #000000;
+}
+
+.container>.header, .container>.footer {
+    grid-column: 1/6;
+    background-color: #1e272e;
+    color: #ffffff;
+}
+
+.container>.content {
+    grid-column: span 3;
+    grid-row: span 4;
+}
+
+.content>.article {
+    background: #808e9b;
+    padding: 20px;
+    margin-top: 5px;
+    color: #dfe6e9
+}
+
+.content .article h1,
+.content .article p {
+    padding: 10px;
+}
+
+.container>.sidebar {
+    grid-column: span 2;
+    grid-row: span 4;
+    background: #485460;
+    color: #ffffff;
+    height: 97%; /* Full height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .sidebar img {
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.container>.related-post {
+    background: #2d3436;
+    color: #ffffff;
+    height: 180px;
+    ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+
+.container>.related-post:hover {
+    cursor: pointer;
+    color: #000000;
+    background: #ffffff;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 768px) {
+    .header {
+        text-align: center;
+    }
+    .container .content {
+        grid-column: 1 / -1;
+    }
+    .container .sidebar {
+        grid-column: 1 / 6;
+    }
+
+    .container .related-post {
+        grid-column: 1/-1;
+    }
+}
+
+
+
+
+
+
+/* Estilos para el contenedor principal y el menú */
+.wrapper {
+    max-width: 300px; /* Ancho máximo del contenedor principal */
+    margin: 0 auto; /* Centra el contenedor principal */
+    display: flex;
+    position: relative; /* Add position:relative to establish a positioning context for the nav */
+}
+
+
+nav {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    width: 90px;
+    position: fixed;
+    height: 100%; /* O ajusta según sea necesario */
+    left: 0; /* Align the menu to the left */
+    right: auto; /* Reset right positioning */
+    top: 0; /* Align to the top */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin-bottom: 10px; /* Ajustamos el margen inferior para dar espacio entre elementos */width: 100px;
+    background-color: #333;
+
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+
+
+
+
+.title{
+    margin-left: 80px; /* Ajusta según el ancho del menú */
+    text-align: center;
+    flex: 1;
+    padding: 20px;
+
+}
+
+
+
+/* Estilos para el contenido */
+.content {
+    margin-left: 20px; /* Ajusta según el ancho del menú */
+    flex: 1;
+    padding: 10px;
+}
+
+
+.box {
+    width: 100%; /* Ajusta el ancho de cada caja según tus necesidades */
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+    margin-bottom: 1px;
+}
+
+
+
+
+section {
+    margin: 20px;
+    flex: 0; /* Hacemos que el contenido ocupe el espacio restante con flexbox */
+}
+
+/* Estilos adicionales según tus preferencias */
+
+
+/* Añadir al final del archivo styles.css */
+
+/* Estilos del formulario de contacto */
+#contacto-formulario {
+    max-width: 400px;
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Estilos de la información de contacto adicional */
+#informacion-contacto {
+    margin-top: 20px;
+}
+
+/* Estilos adicionales según tus preferencias */
+
+
+/* Añadir al final del archivo styles.css */
+
+/* Estilos para la página de habilidades */
+#habilidades {
+    margin: 20px;
+}
+
+.habilidad {
+    margin-bottom: 20px;
+}
+
+.habilidad h2 {
+    color: #333;
+}
+
+/* Estilos adicionales según tus preferencias */
+
+
+/* Añadir al final del archivo styles.css */
+
+/* Estilos para la página de habilidades */
+#habilidades {
+    margin: 20px;
+}
+
+.habilidad {
+    margin-bottom: 20px;
+}
+
+.habilidad h2 {
+    color: #333;
+}
+
+/* Estilos adicionales según tus preferencias */
+
+
+
+/* Estilos adicionales para dispositivos móviles */
+@media only screen and (max-width: 768px) {
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 105%;
+        text-align: center;
+        position: absolute;
+        background-color: #333;
+        z-index: 1;
+        top: 60px;
+        left: 0;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .nav-list li {
+        padding: 15px;
+        margin: 0;
+        border-bottom: 1px solid #555;
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .menu-toggle span {
+        height: 3px;
+        width: 25px;
+        background: #ece6e6;
+        margin-bottom: 4px;
+        display: block;
+    }
+}
+
+
+/* Estilos para la imagen en el cuerpo del proyecto */
+.content img {
+    max-width: 100%; /* Ajusta el ancho máximo según tus necesidades */
+    height: auto;
+    float: left; /* Hace que la imagen flote a la izquierda */
+    margin : 10px;
+    margin-bottom: 10px; /* Espacio entre la imagen y el contenido de texto */
+}
+
+/* Resto de estilos según tus preferencias */
+
+/* Estilos para el texto junto a la imagen */
+
+.content h1 {
+    margin-top: 5; /* Elimina el margen superior predeterminado del h1 */
+    margin: 10px;
+}
+
+/* Resto de estilos según tus preferencias */
