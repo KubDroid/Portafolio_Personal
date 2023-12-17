@@ -9,8 +9,8 @@ body {
     background-image: url("imagenes/HCfU2.png");
         
     font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 110px;
+    margin: 10px;
+    padding: 20px;
     display: flex; /* Agregamos un display:flex al body para utilizar flexbox */
     flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
     min-height: 100vh; /* Establece la altura mínima del cuerpo al 100% del viewport height */
@@ -19,14 +19,14 @@ body {
 
 /* Header */
 .title h1 {
-    padding: 20px 0;
+    padding: 5px 0;
     text-align: center;
     font-size: 1.9rem;
 }
 
 /* CONTAINER */
 .container {
-    width: 150%;
+    width: 105%;
     max-width: 1000px;
     margin: 1.6em auto;
     display: grid;
@@ -58,9 +58,11 @@ body {
 
 .content>.article {
     background: #808e9b;
-    padding: 20px;
+    padding: 5px;
     margin-top: 5px;
-    color: #dfe6e9
+    color: #dfe6e9;
+    overflow: auto;
+    position:center;
 }
 
 .content .article h1,
@@ -138,7 +140,7 @@ nav {
     background-color: #333;
     color: white;
     padding: 10px;
-    width: 90px;
+    width: auto;
     position: fixed;
     height: 100%; /* O ajusta según sea necesario */
     left: 0; /* Align the menu to the left */
