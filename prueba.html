@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        body::before {
+            content: '';
+            background: url('assets/imagenes/5437842.jpg') center/cover no-repeat; /* Cambia 'tu_imagen.jpg' por la ruta de tu imagen de fondo */
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        .color-superpuesto {
+            position: relative;
+            z-index: 1;
+            background-color: rgba(0, 0, 2, 0.5); /* Ajusta el valor alpha (último número) según la opacidad deseada y el color deseado */
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            color: white; /* Cambia el color del texto según sea necesario */
+        }
+    </style>
+    <title>Color sobre Imagen de Fondo</title>
+</head>
+<body>
+    <div class="color-superpuesto">
+        <h1>Contenido con Color</h1>
+        <p>Este es un ejemplo de contenido con un color superpuesto sobre una imagen de fondo.</p>
+    </div>
+</body>
+</html>

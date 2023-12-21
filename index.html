@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-
-
+   
     <div class="wrapper">
     <!-- Barra de navegación 
     <nav>
@@ -20,7 +19,8 @@
             <li><a href="#blog">Blog</a></li>
             <li><a href="#contacto">Contacto</a></li>
         </ul>
-    </nav> -->
+    </nav> 
+    -->
 
     <!-- Barra de navegación -->
         <nav class="navbar">
@@ -40,35 +40,55 @@
         </nav>      
     </div>
     
-    <!-- Contenido del portafolio --> 
-    <header class="title">
-        <h1>Hi 👋, I'm Alejandro</h1>
-    </header>
-    
-
 
     <div class="container">
-        
-        <header class="header">
-            <h1>Alejandro Cubillo Steller</h1>
+
+        <!-- Contenido del portafolio --> 
+        <header class="header fodo-superpuesto color-superpuesto"> <!-- title fodo-superpuesto    color-superpuesto content -->
+            <h1>Hi 👋, I'm Alejandro</h1>
+            <p class="title">Desarrollador Web</p>
+            <img class="imagen-redonda centrar-imagen" src="assets/imagenes/WhatsApp Image 2023-12-17 at 14.44.39.jpeg" alt="Imagen     Redonda" />
         </header>
 
+        <!--horizontal divider(gradiant)-->
+        <br>
+        <hr>
+            
+        <header class="header">
+            <h1>Alejandro Cubillo Steller</h1>
 
+        <br>
+        <br>
 
-        <main class="content">
+            <article class="article">
+                <!-- Sección acerca de mí -->
+                <section id="acerca-de-mi">
+                    <h2>About Me - Acerca de Mí</h2>
+                    <p>Información personal y profesional.</p>
+                    <p>Hi 👋, I'm Alejandro</p>
+                    <p>🎧 Rock & Metal enthusiast 🧙‍♂️ Harry Potter fanatic - 📚 Book Reader - ☕ Coffee addict - 🧉 Mate Lover</p>
+                    <p>🧑‍💻 I have degrees or certifications and studies in office tool packages and various knowledge in programming languages and servers.</p>
+                </section>
+
+        </header>
+        <br>
+        <br>
+
+        <main class="contenido">
             <!-- Resto del contenido del portafolio aquí -->
             <article class="article">
-            <div > 
-                <!-- Imagen en el cuerpo del proyecto -->
-                <img src="assets/imagenes/WhatsApp Image 2023-12-04 at 23.39.06.jpeg" alt="Cerro de Monserrate-Bogota,Colombia">
-            </div>
-                           
             <!-- Sección de inicio -->
             <section id="inicio">
                 <h1>Welcome to my Portfolio - Bienvenido a mi Portafolio</h1>
                 <p>Descripción breve sobre quién eres y qué haces.</p>
-                <p>👨‍🎓 I am a graduated administrator with expertise in accounting, finance, statistics, process analysis, organizational analysis,      project management, organizational prospective analysis, information systems management, with an emphasis on public administration and      business management.</p>
+                <p>👨‍🎓 I am a graduated administrator with expertise in accounting, finance, statistics, process analysis, organizational analysis, project management, organizational prospective analysis, information systems management, with an emphasis on public administration and business management.</p>
             </section>
+            <br>
+            <br>
+            <div> 
+                <!-- Imagen en el cuerpo del proyecto -->
+                <img src="assets/imagenes/WhatsApp Image 2023-12-04 at 23.39.06.jpeg" alt="Cerro de Monserrate-Bogota,Colombia">
+            </div>
             </article>
 
             <article class="article">
@@ -78,10 +98,11 @@
                 <p>Información personal y profesional.</p>
                 <p>Hi 👋, I'm Alejandro</p>
                 <p>🎧 Rock & Metal enthusiast 🧙‍♂️ Harry Potter fanatic - 📚 Book Reader - ☕ Coffee addict - 🧉 Mate Lover</p>
-                <p>🧑‍💻 I have degrees or certifications and studies in office tool packages and various knowledge in programming languages and servers.</        p>
+                <p>🧑‍💻 I have degrees or certifications and studies in office tool packages and various knowledge in programming languages and servers.</p>
             </section>
             </article>
         </main>
+
 
         <aside class="sidebar">
             <!-- Contenido de la página de habilidades -->
@@ -91,35 +112,66 @@
                 <div class="habilidad">
                     <h2>Desarrollo Web</h2>
                     <h3>I have experience with these technologies</h3>
-                    <p>HTML, CSS, JavaScript, React, Node.js</p>
+                    <img align="center" src="assets/imagenes/icons8-html-5-96.png" alt="HTML5" />
+                    <img align="center" src="assets/imagenes/icons8-css-96.png" alt="CSS" />
+                    <img align="center" src="assets/imagenes/js.png" alt="JavaScript" />
+                    <img align="center" src="assets/imagenes/icons8-php-50.png" alt="PHP" />
+                    <img align="center" src="assets/imagenes/wordpress.png" alt="wordpress" />
+
+
+                    <p>HTML, CSS, JavaScript, PHP, wordpress</p>
                 </div>
             
                 <div class="habilidad">
                     <h2>Bases de Datos</h2>
                     <h3>I have experience with these technologies</h3>
+                    <img align="center" src="assets/imagenes/mysql.png" alt="MySQL" />
+                    <img align="center" src="assets/imagenes/icons8-maria-db-96.png" alt="MariaDB" />
+                    <img align="center" src="assets/imagenes/postgre.png" alt="Postgres" />
+                    <img align="center" src="assets/imagenes/icons8-mongo-db-96.png" alt="MongoDB" />
+
                     <p>MySQL, MariaDB, Postgres, MongoDB</p>
                 </div>
             
                 <div class="habilidad">
-                    <h2>Lenguajes de Programación</h2>
+                    <h2>Otros Lenguajes de Programación</h2>
                     <h3>I have experience with these technologies</h3>
-                    <p>Python, Java, C#</p>
+                    <img align="center" src="assets/imagenes/mysql.png" alt="Python" />
+                    <img align="center" src="assets/imagenes/icons8-potencia-shell-96.png" alt="Powershell" />
+                    <img align="center" src="assets/imagenes/icons8-intento-96.png" alt="Bash" />
+                    <img align="center" src="assets/imagenes/icons8-git-96.png" alt="Git" />
+                    <img align="center" src="assets/imagenes/github.png" alt="Github" />
+                    <p>Python, Powershell, Bash, Git, Github</p>
+                </div>
+
+                <div class="habilidad">
+                    <h2>Sistemas Operativos</h2>
+                    <h3>I have experience with these technologies</h3>
+                    <img align="center" src="assets/imagenes/microsoft.png" alt="Windows" />
+                    <img align="center" src="assets/imagenes/ubuntu.png" alt="Linux Ubuntu" />
+                    <p>Windows OS, Linux Ubuntu Distro</p>
                 </div>
             
-                <!-- Puedes agregar más secciones según tus habilidades -->
+            <!-- Puedes agregar más secciones según tus habilidades -->
             <!--tech stack icons-->
             <p align="center">
             <a href="https://skillicons.dev">
-              <img src="https://skillicons.dev/icons?i=powershell,html,css,js,php,mysql,mongodb,postgres,wordpress,discord,vscode,py,git,github,bash,linux&         perline=5" />
+              <img src="https://skillicons.dev/icons?i=powershell,html,css,js,php,mysql,mongodb,postgres,wordpress,discord,vscode,py,git,github,bash,linux&perline=5" height="50" width="50" />
             </a>
             </p>
-
             </section>
 
         </aside>
 
 
-        <div class="related-post">
+        <br>
+        <br>
+        <br>
+        <header class="header"> 
+            <H2>Introduce my proyects</H2>
+        </header>
+
+        <div class="related-post-1">
             <!-- Sección de portafolio -->
             <section id="portafolio">
                 <h2>Portafolio</h2>
@@ -128,44 +180,46 @@
         </div>        
                 
                 
-        <div class="related-post">
+        <div class="related-post-2">
             <p align="center">Another Post</p>
         </div>
 
-        <div class="related-post">
+        <div class="related-post-3">
             <p align="center">Another Post</p>
         </div>
                 
-        <div class="related-post">
+        <div class="related-post-4">
             <p align="center">Another Post</p>
         </div>
                 
-        <div class="related-post">
+        <div class="related-post-5">
             <p align="center">Another Post</p> 
         </div>
         
-        <div class="related-post">
+        <div class="related-post-6">
             <p align="center">Another Post</p> 
         </div>
         
-        <div class="related-post">
+        <div class="related-post-7">
             <!-- Sección de blog -->
             <section id="blog">
                 <h2>Blog</h2>
+                <br>
+                <br>
                 <!-- Aquí puedes incluir tus publicaciones de blog. -->
+                <a href="https://www.linkedin.com/in/   alejandro-cubillo-steller-848361a7" target="blank"><img   align="center" src="assets/imagenes/blog.png" alt="blog"  height="50" width="50" /></a>
             </section>
         </div>
-
-
+    
         <footer class="footer">
             <!-- Sección de contacto -->
             <section id="contacto">
                 <h2>Contacto</h2>
                 <p>Formulario de contacto o información de contacto.</p>
-                <p>¡Me encantaría saber de ti!Completa el formulario o    utiliza los detalles decontacto a continuación.</p>
+                <p>¡Me encantaría saber de ti!Completa el formulario o utiliza los detalles decontacto a continuación.</p>
             
                 <!-- Formulario de contacto -->
-                <form id="contacto-formulario">
+                <form id="contacto-formulario" method="post">
                     <label for="nombre">Nombre:</label>
                     <input type="text" id="nombre" name="nombre" required>
             
@@ -185,34 +239,35 @@
         
             <!-- Información de contactoadicional -->
             <div id="informacion-contacto">
-                <h3>Información decontacto</h3>
+                <h3>Información de contacto</h3>
                 
                 <p>Connect With Me🤝</p>
 
                 <br>
 
                 <!--icons and links-->
-<p align="center">
-    <a href="https://www.linkedin.com/in/alejandro-cubillo-steller-848361a7/" target="blank"><img align="center" src="assets/imagenes/linkedin.png" alt="linkedin" height="50" width="50" /></a>
-    <a href="https://twitter.com/" target="blank"><img align="center" src="assets/imagenes/gorjeo.png" alt="twitter" height="50" width="50" /></a> 
-    <a href="https://www.instagram.com/cubilloalejandro/" target="blank"><img align="center" src="assets/imagenes/instagram.png" alt="twitter" height="50" width="50" /></a>
-    <a href="https://discord.com/channels/817106410314792970/817106410314792974" target="blank"><img align="center" src="assets/imagenes/discord.png" alt="discord" height="50" width="50" /></a>
-    <a href="https://github.com/KubDroid" target="blank"><img align="center" src="assets/imagenes/github.png" alt="github" height="50" width="50" /></a>
-    <a href="mailto:ale.cubillo@gmail.com"><img align="center" src="assets/imagenes/gmail.png" alt="mailto" height="50" width="50" /></a>
-    <a href="https://wa.me/+50688849725" target="_blank"><img align="center" src="assets/imagenes/whatsapp.png" alt="whatsapp" height="50" width="50" /></a>
-
+                <p align="center">
+                <a href="https://www.linkedin.com/in/alejandro-cubillo-steller-848361a7/" target="blank"><img   align="center" src="assets/imagenes/linkedin.png" alt="linkedin"  height="50" width="50" /></a>
+                <a href="https://twitter.com/" target="blank"><img align="center"   src="assets/imagenes/gorjeo.png" alt="twitter" height="50"    width="50" /></a> 
+                <a href="https://www.instagram.com/cubilloalejandro/"   target="blank"><img align="center" src="assets/imagenes/instagram.png" alt="twitter" height="50" width="50" /></a>
+                <a href="https://discord.com/channels/817106410314792970/817106410314792974" target="blank"><img align="center" src="assets/imagenes/discord.png" alt="discord" height="50" width="50" /></a>
+                <a href="https://github.com/KubDroid" target="blank"><img   align="center" src="assets/imagenes/github.png" alt="github"  height="50" width="50" /></a>
+                <a href="mailto:ale.cubillo@gmail.com"><img align="center"  src="assets/imagenes/gmail.png" alt="mailto" height="50" width="50" /    ></a>
+                <a href="https://wa.me/+50688849725" target="_blank"><img   align="center" src="assets/imagenes/whatsapp.png" alt="whatsapp"  height="50" width="50" /></a>
+                </p>
 
             </div>
 
-        <br>
-        <br>
-        <br>
+            <br>
+            <br>
+            <br>
              <div>
                 <h4>© 2020 - 2023 | Todos losderechos reservados.</h4>
                 <p>Personal Profile by Kub.</p>
                 
              </div>
         </footer>
+
     </div>
 
     <!-- Script para animaciones o interactividad -->

@@ -1,0 +1,374 @@
+/* General Styles */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background-image: url("imagenes/5594016.jpg");
+    opacity: 0.9; /* Ajusta el valor según la opacidad deseada */
+    font-family: 'arial', sans-serif;
+    margin: 0px;
+    padding: 10px;
+    display: flex; /* Agregamos un display:flex al body para utilizar flexbox */
+    flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
+    min-height: 100vh; /* Establece la altura mínima del cuerpo al 100% del viewport height */
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen-redonda {
+    border-radius: 50%;
+    display: block;
+    margin: auto; /* Centra la imagen horizontal y verticalmente */
+    width: 170px; /* Ajusta el ancho según tus necesidades */
+    height: 170px; /* Ajusta la altura según tus necesidades */
+    object-fit: cover; /* Asegura que la imagen se ajuste al tamaño especificado */
+}
+
+.centrar-imagen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fodo-superpuesto {
+    background-image: url("imagenes/vecteezy_conexion-de-red-de-internet-empresarial-global-y-redes_9276510.jpg");
+    background-size: cover; /* Asegura que la imagen de fondo se ajuste al contenedor */
+    background-position: center; /* Alinea la imagen de fondo al centro */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen de fondo */ 
+}
+
+.color-superpuesto {
+    background-color: rgba(0, 80, 255, 0.5); /* Ajusta el valor alpha (último número) según la opacidad deseada y el color deseado */
+    position: relative;
+    z-index: 1;
+    padding: 10px;
+    border-radius: 30px;
+    text-align: center;
+    color: white; /* Cambia el color del texto según sea necesario */
+    max-width: 70%; /* Cambiado de width a max-width */
+    width: 100%; /* Asegura que el elemento no sea más ancho que el 70% del contenedor padre */
+    box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el ancho total */
+    
+}
+
+
+hr {
+    border: none;
+    background-color:#333;
+    height: 1px; /* Cambia el grosor según tus necesidades */
+    width: 70%; /* Ancho de la línea, puedes ajustar este valor según tus necesidades */
+    margin: 0 auto; /* Alinea la línea al centro */
+}
+
+
+/* Header */
+.title h1 {
+    padding: 5px 0;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/* CONTAINER */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 1.6em auto;
+    display: grid;
+    gap: 1.6em;
+    /* grid-template-columns: repeat(4, 1fr) 3%; */
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.container .header,
+.container .content,
+.container .sidebar,
+.container .footer,
+.container div {
+/*    background: #fff;*/
+    padding: 20px;
+    border: 1px solid #000000;
+}
+
+.container .header, .container .footer {
+    grid-column: 1/6;
+    background-color: #1e272e;
+    color: #ffffff;
+}
+
+.container .content {
+    grid-column: span 3;
+    grid-row: span 4;
+}
+
+.content .article {
+    background: #808e9b;
+    padding: 5px;
+    margin-top: 5px;
+    color: #dfe6e9;
+    overflow: auto;
+    position:center;
+}
+
+.content .article h1,
+.content .article p {
+    padding: 10px;
+}
+
+.container .sidebar {
+    grid-column: span 2;
+    grid-row: span 4;
+    background: #485460;
+    color: #ffffff;
+    height: 97%; /* Full height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .sidebar img {
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.container .related-post {
+    background: #2d3436;
+    color: #ffffff;
+    height: 180px;
+    ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+
+.container .related-post:hover {
+    cursor: pointer;
+    color: #000000;
+    background: #ffffff;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 768px) {
+    .header {
+        text-align: center;
+    }
+    .container .content {
+        grid-column: 1 / -1;
+    }
+    .container .sidebar {
+        grid-column: 1 / 6;
+    }
+
+    .container .related-post {
+        grid-column: 1/-1;
+    }
+}
+
+
+
+
+
+
+/* Estilos para el contenedor principal y el menú */
+.wrapper {
+    max-width: 300px; /* Ancho máximo del contenedor principal */
+    margin: 0 auto; /* Centra el contenedor principal */
+    display: flex;
+    position: relative; /* Add position:relative to establish a positioning context for the nav */
+}
+
+
+nav {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    width: auto;
+    position: fixed;
+    height: 100%; /* O ajusta según sea necesario */
+    left: 0; /* Align the menu to the left */
+    right: auto; /* Reset right positioning */
+    top: 0; /* Align to the top */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin-bottom: 10px; /* Ajustamos el margen inferior para dar espacio entre elementos */width: 100px;
+    background-color: #333;
+
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+
+
+
+
+.title {
+    margin-left: 80px; /* Ajusta según el ancho del menú */
+    text-align: center;
+    flex: 1;
+    padding: 20px;
+
+}
+
+
+
+/* Estilos para el contenido */
+.content {
+    margin-left: 20px; /* Ajusta según el ancho del menú */
+    flex: 1;
+    padding: 10px;
+}
+
+.box {
+    width: 100%; /* Ajusta el ancho de cada caja según tus necesidades */
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+    margin-bottom: 1px;
+}
+
+
+
+
+section {
+    margin: 20px;
+    flex: 0; /* Hacemos que el contenido ocupe el espacio restante con flexbox */
+}
+
+/* Estilos adicionales según tus preferencias */
+
+
+/* Añadir al final del archivo styles.css */
+
+/* Estilos del formulario de contacto */
+#contacto-formulario {
+    max-width: 400px;
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Estilos de la información de contacto adicional */
+#informacion-contacto {
+    margin-top: 20px;
+}
+
+/* Estilos adicionales según tus preferencias */
+
+
+/* Añadir al final del archivo styles.css */
+
+/* Estilos para la página de habilidades */
+#habilidades {
+    margin: 20px;
+}
+
+.habilidad {
+    margin-bottom: 20px;
+}
+
+.habilidad h2 {
+    color: #333;
+}
+
+/* Estilos adicionales según tus preferencias */
+
+
+/* Añadir al final del archivo styles.css */
+
+
+
+/* Estilos adicionales para dispositivos móviles */
+@media only screen and (max-width: 768px) {
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 105%;
+        text-align: center;
+        position: absolute;
+        background-color: #333;
+        z-index: 1;
+        top: 60px;
+        left: 0;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .nav-list li {
+        padding: 15px;
+        margin: 0;
+        border-bottom: 1px solid #555;
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .menu-toggle span {
+        height: 3px;
+        width: 25px;
+        background: #ece6e6;
+        margin-bottom: 4px;
+        display: block;
+    }
+}
+
+
+/* Estilos para la imagen en el cuerpo del proyecto */
+.content img {
+    max-width: 100%; /* Ajusta el ancho máximo según tus necesidades */
+    height: auto;
+    float: left; /* Hace que la imagen flote a la izquierda */
+    margin : 10px;
+    margin-bottom: 5px; /* Espacio entre la imagen y el contenido de texto */
+}
+
+/* Resto de estilos según tus preferencias */
+
+/* Estilos para el texto junto a la imagen */
+
+.content h1 {
+    margin-top: 5px; /* Elimina el margen superior predeterminado del h1 */
+    margin: 10px;
+}
+
+/* Resto de estilos según tus preferencias */

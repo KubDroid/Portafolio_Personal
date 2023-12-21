@@ -4,59 +4,64 @@
     padding: 0;
 }
 
-
 body {
-    background-image: url("imagenes/HCfU2.png");
-        
-    font-family: 'Arial', sans-serif;
-    margin: 10px;
-    padding: 20px;
-    display: flex; /* Agregamos un display:flex al body para utilizar flexbox */
+    background-image: url("imagenes/5594016.jpg");
+    opacity: 0.9; /* Ajusta el valor según la opacidad deseada */
+    font-family: 'arial', sans-serif;
+    margin: 0px;
+    padding: 10px;
+    /* display: flex; /* Agregamos un display:flex al body para utilizar flexbox */
     flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
     min-height: 100vh; /* Establece la altura mínima del cuerpo al 100% del viewport height */
+    justify-content: center;
+    align-items: center; */
 }
 
-
-/* Header */
-.title h1 {
-    padding: 5px 0;
-    text-align: center;
-    font-size: 1.9rem;
-}
 
 /* CONTAINER */
 .container {
-    width: 105%;
-    max-width: 1000px;
-    margin: 1.6em auto;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
     display: grid;
-    gap: 1.6em;
+    grid-gap: 20px;
     /* grid-template-columns: repeat(4, 1fr) 3%; */
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "header header header header header header"
+						 "sidebar sider contenido contenido contenido"
+						 " related-post-1 related-post-2 related-post-3"
+						 "footer footer footer footer footer footer";
 }
 
-.container > .header,
-.container > .content,
-.container > .sidebar,
-.container > .footer,
-.container > div{
+.container > div,
+.container .header,
+.container .contenido,
+.container .sidebar,
+.container .footer {
     background: #fff;
     padding: 20px;
-    border: 1px solid #000000;
+    border: 4px solid #000000;
 }
 
-.container>.header, .container>.footer {
-    grid-column: 1/6;
-    background-color: #1e272e;
+.container .header {
+	background: #12203E;
+	color: #fff;
+}
+
+.container .header, .container .footer {
+    grid-column: 2/7;
+    background-color: #315e81;
     color: #ffffff;
 }
 
-.container>.content {
-    grid-column: span 3;
-    grid-row: span 4;
+.container .contenido {
+    background-color: #7d7eb0;
+    grid-column: 4/7;
+    grid-row: 5/9;
 }
 
-.content>.article {
+.content .article {
     background: #808e9b;
     padding: 5px;
     margin-top: 5px;
@@ -70,143 +75,120 @@ body {
     padding: 10px;
 }
 
-.container>.sidebar {
-    grid-column: span 2;
-    grid-row: span 4;
-    background: #485460;
+.container .sidebar {
+    grid-column: 2/4;
+    background: #fAA43D;
     color: #ffffff;
-    height: 97%; /* Full height */
+    height: 98%; /* Full height */
     display: flex;
     align-items: center;
     justify-content: center;
+    grid-row: 5/8;
 }
 
 .container .sidebar img {
     display: block;
-    width: 100%;
+    width: 25%;
     margin-top: 5px;
+    display: inline-block;
+    margin: 0 10px; /* Espaciado entre las imágenes, ajusta según sea necesario */
 }
 
-.container>.related-post {
-    background: #2d3436;
+.container .related-post-1,
+.container .related-post-2,
+.container .related-post-3,
+.container .related-post-4,
+.container .related-post-5,
+.container .related-post-6,
+.container .related-post-7 {
+    background: #22667a;
     color: #ffffff;
     height: 180px;
-    ;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.5s ease;
 }
 
-.container>.related-post:hover {
+.container .related-post-1,
+.container .related-post-6 {
+    grid-column: 2/3;
+}
+
+.container .related-post-1:hover,
+.container .related-post-2:hover,
+.container .related-post-3:hover,
+.container .related-post-4:hover,
+.container .related-post-5:hover,
+.container .related-post-6:hover,
+.container .related-post-7:hover {
     cursor: pointer;
     color: #000000;
     background: #ffffff;
 }
 
-/* MEDIA QUERIES */
-
-@media screen and (max-width: 768px) {
-    .header {
-        text-align: center;
-    }
-    .container .content {
-        grid-column: 1 / -1;
-    }
-    .container .sidebar {
-        grid-column: 1 / 6;
-    }
-
-    .container .related-post {
-        grid-column: 1/-1;
-    }
+.container .footer {
+    background: #12203E;
+	color: #fff;
+	grid-column: 2/7;
 }
 
 
-
-
-
-
-/* Estilos para el contenedor principal y el menú */
-.wrapper {
-    max-width: 300px; /* Ancho máximo del contenedor principal */
-    margin: 0 auto; /* Centra el contenedor principal */
-    display: flex;
-    position: relative; /* Add position:relative to establish a positioning context for the nav */
+.imagen-redonda {
+    border-radius: 50%;
+    display: block;
+    margin: auto; /* Centra la imagen horizontal y verticalmente */
+    width: 170px; /* Ajusta el ancho según tus necesidades */
+    height: 170px; /* Ajusta la altura según tus necesidades */
+    object-fit: cover; /* Asegura que la imagen se ajuste al tamaño especificado */
 }
 
+.fodo-superpuesto {
+    background-image: url("imagenes/vecteezy_conexion-de-red-de-internet-empresarial-global-y-redes_9276510.jpg");
+    background-size: cover; /* Asegura que la imagen de fondo se ajuste al contenedor */
+    background-position: center; /* Alinea la imagen de fondo al centro */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen de fondo */ 
+}
 
-nav {
-    background-color: #333;
-    color: white;
+.color-superpuesto {
+    background-color: rgba(0, 80, 255, 0.2); /* Ajusta el valor alpha (último número) según la opacidad deseada y el color deseado */
+    position: relative;
+    z-index: 1;
     padding: 10px;
-    width: auto;
-    position: fixed;
-    height: 100%; /* O ajusta según sea necesario */
-    left: 0; /* Align the menu to the left */
-    right: auto; /* Reset right positioning */
-    top: 0; /* Align to the top */
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav li {
-    margin-bottom: 10px; /* Ajustamos el margen inferior para dar espacio entre elementos */width: 100px;
-    background-color: #333;
-
-}
-
-a {
-    text-decoration: none;
-    color: white;
-}
-
-
-
-
-
-.title{
-    margin-left: 80px; /* Ajusta según el ancho del menú */
+    border-radius: 30px;
     text-align: center;
-    flex: 1;
-    padding: 20px;
+    color: white; /* Cambia el color del texto según sea necesario */
+    max-width: 100%; /* Cambiado de width a max-width */
+    width: 100%; /* Asegura que el elemento no sea más ancho que el 70% del contenedor padre */
+    box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el ancho total */
+    
+}
 
+hr {
+    border: none;
+    background-color:#6062d3;
+    height: 3px; /* Cambia el grosor según tus necesidades */
+    width: 100%; /* Ancho de la línea, puedes ajustar este valor según tus necesidades */
+    margin: 0 auto; /* Alinea la línea al centro */
+}
+
+.icono-pequeno {
+    width: 16px; /* Ajusta el ancho según tus necesidades */
+    height: 16px; /* Ajusta la altura según tus necesidades */
 }
 
 
-
-/* Estilos para el contenido */
-.content {
-    margin-left: 20px; /* Ajusta según el ancho del menú */
-    flex: 1;
-    padding: 10px;
-}
-
-
-.box {
-    width: 100%; /* Ajusta el ancho de cada caja según tus necesidades */
-    padding: 10px;
-    border: 1px solid #ccc;
+/* Header */
+.title h1  p{
+    padding: 5px 0;
     text-align: center;
-    margin-bottom: 1px;
+    font-size: 2.5rem;
 }
 
 
 
 
-section {
-    margin: 20px;
-    flex: 0; /* Hacemos que el contenido ocupe el espacio restante con flexbox */
-}
 
-/* Estilos adicionales según tus preferencias */
-
-
-/* Añadir al final del archivo styles.css */
 
 /* Estilos del formulario de contacto */
 #contacto-formulario {
@@ -220,13 +202,13 @@ label {
 }
 
 input, textarea {
-    width: 100%;
+    width: 200%;
     padding: 8px;
     margin-bottom: 10px;
 }
 
 button {
-    background-color: #333;
+    background-color: #6f73dd;
     color: white;
     padding: 10px;
     border: none;
@@ -234,8 +216,10 @@ button {
 }
 
 button:hover {
-    background-color: #555;
+    background-color: #c9ceea;
 }
+
+
 
 /* Estilos de la información de contacto adicional */
 #informacion-contacto {
@@ -260,26 +244,81 @@ button:hover {
     color: #333;
 }
 
-/* Estilos adicionales según tus preferencias */
+
+/* Estilos para el contenedor principal y el menú */
+.wrapper {
+    max-width: 300px; /* Ancho máximo del contenedor principal */
+    margin: 0 auto; /* Centra el contenedor principal */
+    display: flex;
+    position: relative; /* Add position:relative to establish a positioning context for the nav */
+}
 
 
-/* Añadir al final del archivo styles.css */
+nav {
+    background-color: #113622;
+    color: white;
+    padding: 10px;
+    width: auto;
+    position: fixed;
+    height: 100%; /* O ajusta según sea necesario */
+    left: 0; /* Align the menu to the left */
+    right: auto; /* Reset right positioning */
+    top: 0; /* Align to the top */
+    display: grid;  /* Add grid display */
+    grid-template-rows: auto auto auto 1fr auto;  /* Adjust grid template rows */
+}
 
-/* Estilos para la página de habilidades */
-#habilidades {
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: grid;  /* Add grid display */
+    grid-template-rows: repeat(auto-fill, minmax(50px, 1fr));  /* Adjust grid template rows */
+}
+
+nav li {
+    margin-bottom: 10px; /* Ajustamos el margen inferior para dar espacio entre elementos */width: 100px;
+    background-color: #113622;
+
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.title {
+    margin-left: 80px; /* Ajusta según el ancho del menú */
+    text-align: center;
+    flex: 1;
+    padding: 20px;
+
+}
+
+
+/* Estilos para el contenido */
+.content {
+    margin-left: 20px; /* Ajusta según el ancho del menú */
+    flex: 1;
+    padding: 10px;
+}
+
+.box {
+    width: 100%; /* Ajusta el ancho de cada caja según tus necesidades */
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+    margin-bottom: 1px;
+}
+
+
+section {
     margin: 20px;
-}
-
-.habilidad {
-    margin-bottom: 20px;
-}
-
-.habilidad h2 {
-    color: #333;
+    flex: 0; /* Hacemos que el contenido ocupe el espacio restante con flexbox */
 }
 
 /* Estilos adicionales según tus preferencias */
-
 
 
 /* Estilos adicionales para dispositivos móviles */
@@ -323,12 +362,12 @@ button:hover {
 
 
 /* Estilos para la imagen en el cuerpo del proyecto */
-.content img {
+.contenido img {
     max-width: 100%; /* Ajusta el ancho máximo según tus necesidades */
     height: auto;
     float: left; /* Hace que la imagen flote a la izquierda */
-    margin : 10px;
-    margin-bottom: 10px; /* Espacio entre la imagen y el contenido de texto */
+    margin : 5px;
+    margin-bottom: 5px; /* Espacio entre la imagen y el contenido de texto */
 }
 
 /* Resto de estilos según tus preferencias */
@@ -336,8 +375,48 @@ button:hover {
 /* Estilos para el texto junto a la imagen */
 
 .content h1 {
-    margin-top: 5; /* Elimina el margen superior predeterminado del h1 */
+    margin-top: 5px; /* Elimina el margen superior predeterminado del h1 */
     margin: 10px;
 }
 
-/* Resto de estilos según tus preferencias */
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 768px) {
+    .header {
+        text-align: center;
+    }
+
+    .container {
+        grid-template-columns: 1fr; /* Cambia a una sola columna */;
+        grid-template-rows: auto auto auto auto; /* Cambia a filas automáticas */
+        }
+
+    .container .sidebar {
+        grid-column: 1 / -1;
+      }
+    
+    .container .contenido {
+        grid-column: 1 / -1;
+      }    
+
+    .container .related-post-1,
+    .container .related-post-2,
+    .container .related-post-3,
+    .container .related-post-4,
+    .container .related-post-5,
+    .container .related-post-6,
+    .container .related-post-7 {
+        grid-column: 1 / -1;
+    }
+    .fodo-superpuesto{
+        text-align: center;
+    }
+    .color-superpuesto {
+        text-align: center;  
+    }
+    
+    .imagen-redonda {
+        margin: 0 auto; /* Centra la imagen horizontalmente */
+        display: block;
+    }
+} 
