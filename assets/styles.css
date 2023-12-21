@@ -143,8 +143,8 @@ body {
     object-fit: cover; /* Asegura que la imagen se ajuste al tamaño especificado */
 }
 
-.fodo-superpuesto {
-    background-image: url("imagenes/vecteezy_conexion-de-red-de-internet-empresarial-global-y-redes_9276510.jpg");
+.fondo-superpuesto {
+    background-image: url(imagenes/vecteezy_conexion-de-red-de-internet-empresarial-global-y-redes_9276510.jpg);
     background-size: cover; /* Asegura que la imagen de fondo se ajuste al contenedor */
     background-position: center; /* Alinea la imagen de fondo al centro */
     background-repeat: no-repeat; /* Evita la repetición de la imagen de fondo */ 
@@ -184,9 +184,6 @@ hr {
     text-align: center;
     font-size: 2.5rem;
 }
-
-
-
 
 
 
