@@ -51,7 +51,7 @@ body {
 
 .container .header, .container .footer {
     grid-column: 2/7;
-    background-color: #315e81;
+    background-color: #0b5994;
     color: #ffffff;
 }
 
@@ -179,10 +179,11 @@ hr {
 
 
 /* Header */
-.title h1  p{
+.header h1  p  {
     padding: 5px 0;
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 100.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* Cambia 'Your Chosen Font' a la fuente que prefieras */
 }
 
 
