@@ -21,7 +21,7 @@ body {
     box-shadow: 10px 6px 37px -13px rgba(51, 51, 51, 0.74);
     border-radius: 10px;
     padding: 10px;
-    text-align: center;
+    text-align: left;
     font-weight: 500;
 }
 
@@ -48,6 +48,7 @@ body {
             grid-area: header;
             background-color: #2f8ed7;
             color: #ffffff;
+            text-align: center;
         }
 
         .header2 {
@@ -60,6 +61,7 @@ body {
         .header3 {
             grid-area: header3;
             background-color: rgba(103, 93, 241, 0.74);
+            text-align: center;
         }
     
         .navbar {
@@ -134,6 +136,17 @@ body {
             grid-column: 3;
         }
 
+        .related-post-1:hover, 
+        .related-post-2:hover,
+        .related-post-3:hover,
+        .related-post-4:hover,
+        .related-post-5:hover,
+        .related-post-6:hover,
+        .related-post-7:hover {
+            cursor: pointer;
+            color: #000000;
+            background: #ffffff;
+        }
 
         .footer {
             grid-area: footer;
@@ -148,6 +161,8 @@ body {
                 "navbar header2" auto
                 "sidebar main" auto
                 "header3 header3" auto
+                "related-post related-post" auto
+                "related-post related-post" auto
                 "related-post related-post" auto
                 "footer footer" auto/
                 auto auto;
