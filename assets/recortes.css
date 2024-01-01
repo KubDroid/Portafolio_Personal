@@ -1,0 +1,515 @@
+body {
+    background-image: url("imagenes/5594016.jpg");
+    opacity: 0.9; /* Ajusta el valor según la opacidad deseada */
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    min-height: 100vh;
+/*     margin: 0px; */
+    padding: 20px;
+/*     flex-direction: column; /* Asegura que los elementos se apilen verticalmente */ */
+/*     min-height: 100vh; /* Establece la altura mínima del cuerpo al 100% del viewport height */ */
+/*     justify-content: center;
+    align-items: center; */
+}
+
+
+
+.grid-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 5% auto;
+    display: grid;
+    grid-gap: 20px;
+    /* grid-template-columns: repeat(4, 1fr) 3%; */
+    grid-template-columns: repeat(5, 16.66%);
+    grid-template-rows: repeat(4, auto);
+    grid-template:
+        "header" 200px
+        "navbar" 50px
+        "main" 100px
+        "sidebar"
+        "footer";
+}
+
+
+.grid-container > div,
+.grid-container .header,
+.grid-container .navbar,
+.grid-container .sidebar,
+.grid-container .contenido,
+.grid-container .related-post,
+.grid-container .footer {
+    background: #fff;
+    padding: 40px;
+    border: 5px solid #000000;
+    border-radius: 10px;
+}
+
+.grid-container .header {
+	background: #2b54a7;
+	color: #fff;
+}
+
+.grid-container .header, .grid-container .footer {
+    grid-column: 1/-1;
+    background-color: #2f8ed7;
+    color: #ffffff;
+    margin-top: 20px; /* Adjust the margin-top value as needed */
+}
+
+.grid-container .navbar {
+    grid-column: span 5; /* Ajusta el rango de columnas según tus necesidades */
+    background-color: #9fe27f;
+    color: #ffffff;
+    padding: 05px;
+    margin: 0px;
+}
+
+
+.grid-container .contenido {
+    grid-column: 3/6;
+    background-color: #7d7eb0;
+    color: #dbbb6b;
+    height: 90%; /* Full height */
+    display: flex;
+    text-align: left;
+    align-items: center;
+    justify-content: flex-start; /* Ajusta la alineación a la izquierda */
+    min-height: 100px;
+    /* grid-row: 5/9; */
+}
+
+.grid-container .sidebar {
+    grid-column: 1/3;
+    
+    background: #fAA43D;
+    color: #ffffff;
+    height: 90%; /* Full height */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+/*     grid-row: 5/8; */
+	
+}
+
+.grid-container .related-post-1,
+.grid-container .related-post-6 {
+    background: #22667a;
+    color: #ffffff;
+    height: 180px;
+    grid-column: 1/2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+
+.grid-container .related-post-2,
+.grid-container .related-post-7 {
+    background: #22667a;
+    color: #ffffff;
+    height: 180px;
+    grid-column: 2/3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+
+.grid-container .related-post-3 {
+    background: #22667a;
+    color: #ffffff;
+    height: 180px;
+    grid-column: 3/4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+
+.grid-container .related-post-4 {
+    background: #22667a;
+    color: #ffffff;
+    height: 180px;
+    grid-column: 4/5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+
+.grid-container .related-post-5 {
+    background: #22667a;
+    color: #ffffff;
+    height: 180px;
+    grid-column: 5/6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+
+
+.grid-container .related-post-1:hover, 
+.grid-container .related-post-2:hover,
+.grid-container .related-post-3:hover,
+.grid-container .related-post-4:hover,
+.grid-container .related-post-5:hover,
+.grid-container .related-post-6:hover,
+.grid-container .related-post-7:hover {
+    cursor: pointer;
+    color: #000000;
+    background: #ffffff;
+}
+
+.grid-container .contenido img {
+    max-width: 100%; /* Ajusta el ancho máximo según tus necesidades */
+    height: auto;
+    width: 100%;
+    float: left; /* Hace que la imagen flote a la izquierda */
+    margin : 5px;
+    margin-bottom: 10px; /* Espacio entre la imagen y el contenido de texto */
+}
+
+.grid-container .sidebar img {
+    display: block;
+    width: 15%; /* Ajusta el ancho según tus necesidades */
+    height: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.grid-container .footer {
+    background: #12203E;
+	color: #ffffff;
+	grid-column: 1/6;
+}
+
+.icono-pequeño {
+    width: 16px; /* Ajusta el ancho según tus necesidades */
+    height: 16px; /* Ajusta la altura según tus necesidades */
+}
+
+.imagen-redonda {
+    border-radius: 60%;
+    display: block;
+    margin: auto; /* Centra la imagen horizontal y verticalmente */
+    width: 170px; /* Ajusta el ancho según tus necesidades */
+    height: 170px; /* Ajusta la altura según tus necesidades */
+    object-fit: cover; /* Asegura que la imagen se ajuste al tamaño especificado */
+}
+
+.color-superpuesto {
+    background-color: rgba(0, 80, 255, 0.2); /* Ajusta el valor alpha (último número) según la opacidad deseada y el color deseado */
+    position: relative;
+    z-index: 1;
+    padding: 10px;
+    border-radius: 30px;
+    text-align: center;
+    color: rgb(7, 7, 7); /* Cambia el color del texto según sea necesario */
+    max-width: 100%; /* Cambiado de width a max-width */
+    width: 100%; /* Asegura que el elemento no sea más ancho que el 70% del contenedor padre */
+    box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el ancho total */
+    
+}
+
+.grid-container .header .p .title {
+    margin-left: 0px; /* Ajusta según el ancho del menú */
+    text-align: center;
+    flex: 1;
+    padding: 20px;
+
+}
+
+
+/* Estilos del formulario de contacto */
+#contacto-formulario {
+    max-width: 400px;
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 200%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #6f73dd;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #c9ceea;
+    color: black;
+}
+
+
+
+/* Estilos para el contenedor principal y el menú */
+
+
+
+nav {
+    background-color: #113622;
+    color: white;
+    padding: 10px;
+    height: 50px; /* Set the height of the top bar */
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between; /* Align items to the ends of the container */
+    align-items: center; /* Center items vertically */
+}
+
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10;
+    display: flex;  /* Add grid display */
+    grid-template-rows: repeat(auto-fill, minmax(50px, 1fr));  /* Adjust grid template rows */
+}
+
+nav li {
+    margin-bottom: 10px; /* Ajustamos el margen inferior para dar espacio entre elementos */
+    width: 150px;
+    background-color: #113622;
+    display: inline-block; /* Muestra los elementos en línea horizontalmente */
+}
+
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.title {
+    margin-left: 80px; /* Ajusta según el ancho del menú */
+    text-align: center;
+    flex: 1;
+    padding: 20px;
+}
+
+/* Estilos para el contenido */
+.contenido {
+    margin-left: 20px; /* Ajusta según el ancho del menú */
+    flex: 1;
+    padding: 10px;
+}
+
+.box {
+    width: 100%; /* Ajusta el ancho de cada caja según tus necesidades */
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+    margin-bottom: 1px;
+}
+
+
+/* Estilos adicionales para dispositivos móviles */
+@media only screen and (max-width: 768px) {
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        background-color: #333;
+        z-index: 5;
+        top: 50px;
+        left: 0;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .nav-list li {
+        padding: 15px;
+        margin: 0;
+        border-bottom: 2px solid #555;
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .menu-toggle span {
+        height: 3px;
+        width: 25px;
+        background: #ece6e6;
+        margin-bottom: 4px;
+        display: block;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .body {
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    }
+
+
+    .header {
+        text-align: center;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr; /* Cambia a una sola columna */;
+        grid-template-rows: auto auto auto auto; /* Cambia a filas automáticas */
+        grid-column: span 1;
+        justify-content: center;
+        }
+
+    .grid-container .navbar {
+        grid-column: 1 / -1;
+    }
+
+    .grid-container .sidebar {
+        grid-column: 1 / -1;
+        
+    }
+
+    .grid-container .header,
+    .grid-container .footer {
+        grid-column: 1 / -1;
+    }
+
+    .grid-container .header {
+        margin-top: 50px; /* Adjust the top margin according to your design */
+    }
+
+
+    .grid-container .contenido {
+        grid-column: 1 / -1;
+    }    
+
+    .grid-container .related-post-1,
+    .grid-container .related-post-2,
+    .grid-container .related-post-3,
+    .grid-container .related-post-4,
+    .grid-container .related-post-5,
+    .grid-container .related-post-6,
+    .grid-container .related-post-7 {
+        grid-column: 1 / -1;
+    }
+
+    .fodo-superpuesto{
+        text-align: center;
+    }
+    .color-superpuesto {
+        text-align: center;  
+    }
+    
+    .imagen-redonda {
+        margin: 0 auto; /* Centra la imagen horizontalmente */
+        display: block;
+    }
+
+    .grid-container .sidebar img {
+        display: block;
+        width: 10%;
+    }
+
+    .grid-container .contenido img {
+        max-width: 100%; /* Ajusta el ancho máximo según tus necesidades */
+        height: auto;
+        float: left; /* Hace que la imagen flote a la izquierda */
+        margin : 5px;
+        margin-bottom: 5px; /* Espacio entre la imagen y el contenido de texto */
+    }
+} 
+
+@media screen and (min-width: 769px) and (max-width: 1000px) {
+    .body {
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    }
+    
+    .header {
+        text-align: center;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr; /* Cambia a una sola columna */;
+        grid-template-rows: auto auto auto auto; /* Cambia a filas automáticas */
+        grid-column: span 1;
+        
+    }
+
+    .grid-container .navbar {
+        grid-column: 1 / -1;
+    }
+
+    .grid-container .sidebar {
+        grid-column: 1 / -1;
+    }
+
+    .grid-container .header,
+    .grid-container .footer {
+        grid-column: 1 / -1;
+    }
+
+    .grid-container .header {
+        margin-top: 50px; /* Adjust the top margin according to your design */
+    }
+
+    .grid-container .contenido {
+        grid-column: 1 / -1;
+    }    
+
+    .grid-container .related-post-1,
+    .grid-container .related-post-2,
+    .grid-container .related-post-3,
+    .grid-container .related-post-4,
+    .grid-container .related-post-5,
+    .grid-container .related-post-6,
+    .grid-container .related-post-7 {
+        grid-column: 1 / -1;
+    }
+
+    .fodo-superpuesto{
+        text-align: center;
+    }
+    .color-superpuesto {
+        text-align: center;  
+    }
+    
+    .imagen-redonda {
+        margin: 0 auto; /* Centra la imagen horizontalmente */
+        display: block;
+    }
+
+    .grid-container .sidebar img {
+        display: block;
+        width: 10%; /* Ajusta el ancho según tus necesidades */
+        height: auto;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        display: inline-block;
+    }
+
+    .grid-container .contenido img {
+        max-width: 100%; /* Ajusta el ancho máximo según tus necesidades */
+        height: auto;
+        float: left; /* Hace que la imagen flote a la izquierda */
+        margin : 5px;
+        margin-bottom: 5px; /* Espacio entre la imagen y el contenido de texto */
+    }
+}

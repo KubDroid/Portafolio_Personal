@@ -1,0 +1,117 @@
+/* General Styles */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("imagenes/5594016.jpg");
+    opacity: 0.9; /* Ajusta el valor según la opacidad deseada */
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+
+/* CONTAINER */
+.grid-container>* {
+    box-shadow: 10px 6px 37px -13px rgba(51, 51, 51, 0.74);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.grid-container {
+    background: lightsalmon;
+    border: 3px solid black;
+    border-radius: 10px;
+    display: grid;
+    gap: 8px;
+    padding: 4px;
+    height: auto;
+    grid-auto-rows: auto;
+    grid-template:
+        "header" auto
+        "header2" auto
+        "navbar" auto
+        "main" auto
+        "sidebar" auto
+        "header3" auto
+        "related-post" auto
+        "footer" auto/auto;
+
+        .header {
+            grid-area: header;
+            background-color: rgba(103, 93, 241, 0.74);
+        }
+
+        .header2 {
+            grid-area: header2;
+            background-color: rgba(103, 93, 241, 0.74);
+        }
+
+        .header3 {
+            grid-area: header3;
+            background-color: rgba(103, 93, 241, 0.74);
+        }
+    
+        .navbar {
+            grid-area: navbar;
+            background-color: rgba(179, 46, 241, 0.74);
+        }
+    
+        .sidebar {
+            grid-area: sidebar;
+            background-color: rgba(77, 237, 106, 0.74);
+        }
+    
+        .main {
+            grid-area: main;
+            background-color: #f5f5f5;
+        }
+
+        .related-post-1,
+        .related-post-2,
+        .related-post-3,
+        .related-post-4,
+        .related-post-5,
+        .related-post-6,
+        .related-post-7 {
+            grid-area: related-post;
+            background-color: beige;
+        }
+
+
+        .footer {
+            grid-area: footer;
+            background-color: rgba(237, 123, 67, 0.74);
+        }
+
+        @media (min-width:768px) {
+            grid-template:
+                "navbar header" auto
+                "navbar header2" auto
+                "sidebar main" auto
+                "header3 header3" auto
+                "related-post related-post" auto
+                "footer footer" auto/
+                auto auto;
+                
+        }
+        @media (min-width:992px) {
+            grid-template:
+                "navbar header header" auto
+                "navbar header2 header2" auto
+                "navbar sidebar main" auto
+                "navbar header3 header3" auto
+                "navbar related-post related-post" auto
+                "navbar footer footer" auto/
+                auto auto auto;
+                
+        }
+
+}

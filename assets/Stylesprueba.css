@@ -1,0 +1,226 @@
+/* General Styles */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("imagenes/5594016.jpg");
+    opacity: 0.9; /* Ajusta el valor según la opacidad deseada */
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+
+/* CONTAINER */
+.grid-container>* {
+    box-shadow: 10px 6px 37px -13px rgba(51, 51, 51, 0.74);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.grid-container {
+    /*background: lightsalmon;*/
+    border: 3px solid black;
+    border-radius: 10px;
+    display: grid;
+    gap: 8px;
+    padding: 4px;
+    height: auto;
+    grid-auto-rows: auto;
+    grid-template:
+        "header" auto
+        "header2" auto
+        "navbar" auto
+        "main" auto
+        "sidebar" auto
+        "header3" auto
+        "related-post" auto
+        "footer" auto/auto;
+
+        .header {
+            grid-area: header;
+            background-color: #2f8ed7;
+            color: #ffffff;
+        }
+
+        .header2 {
+            grid-area: header2;
+            background-color: rgba(103, 93, 241, 0.74);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header3 {
+            grid-area: header3;
+            background-color: rgba(103, 93, 241, 0.74);
+        }
+    
+        .navbar {
+            grid-area: navbar;
+            background-color: #9fe27f;
+            color: #ffffff;
+        }
+    
+        .sidebar {
+            grid-area: sidebar;
+            background: #fAA43D;
+            color: #040404;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        .main {
+            grid-area: main;
+            background-color: #7d7eb0;
+            color: #040404;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .related-post-1,
+        .related-post-2,
+        .related-post-3,
+        .related-post-4,
+        .related-post-5,
+        .related-post-6,
+        .related-post-7 {
+            grid-area: related-post;
+            background: #22667a;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Define las posiciones individuales en la cuadrícula */
+        .related-post-1 {
+            grid-row: 1; /* Primera fila */
+            grid-column: 1;
+        }
+
+        .related-post-2 {
+            grid-row: 2; /* Segunda fila */
+            grid-column: 2;
+        }
+
+        .related-post-3 {
+            grid-row: 3; /* Segunda fila */
+            grid-column: 3;
+        }
+        .related-post-4 {
+            grid-row: 4; /* Segunda fila */
+            grid-column: 4;
+        }
+
+        .related-post-5 {
+            grid-row: 5; /* Segunda fila */
+            grid-column: 5;
+        }
+
+
+        .footer {
+            grid-area: footer;
+            background: #12203E;
+	        color: #ffffff;;
+        }
+
+        @media (min-width:768px) {
+            grid-template:
+                "navbar header" auto
+                "navbar header2" auto
+                "sidebar main" auto
+                "header3 header3" auto
+                "related-post related-post" auto
+                "footer footer" auto/
+                auto auto;
+                
+        }
+        @media (min-width:992px) {
+            grid-template:
+                ". header header header header header" auto
+                "navbar header2 header2 header2 header2 header2" auto
+                "navbar sidebar sidebar main main main" auto
+                "navbar header3 header3 header3 header3 header3" auto
+                "navbar related-post related-post related-post related-post related-post" auto
+                ". footer footer footer footer footer" auto/
+                auto auto auto auto auto auto;
+                
+        }
+
+        .header2.h {
+            display: flex;
+            align-items: stretch;
+            justify-content: space-between;
+            text-align: left;
+        }
+
+        p{
+            font-family:helvetica,sans-serif;
+        }
+
+        p.estilo-1::first-letter{
+        	font-size:3em;
+        	font-family:serif;
+        }
+
+        p.estilo-2::first-letter{
+            font-size:3em;
+            font-family:serif;
+            margin:8px;
+            float:left;
+        }
+
+        .imagen-redonda {
+            border-radius: 60%;
+            display: block;
+            margin: auto; /* Centra la imagen horizontal y verticalmente */
+            width: 170px; /* Ajusta el ancho según tus necesidades */
+            height: 170px; /* Ajusta la altura según tus necesidades */
+            object-fit: cover; /* Asegura que la imagen se ajuste al tamaño especificado */
+        }
+
+        .imagen-me {
+
+            display: flex;
+
+            grid-area: image-me;
+        }
+
+                /* Estilos del formulario de contacto */
+        #contacto-formulario {
+            max-width: 400px;
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input, textarea {
+            width: 200%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #6f73dd;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #c9ceea;
+            color: black;
+        }
+
+}

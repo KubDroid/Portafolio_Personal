@@ -3,42 +3,243 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            position: relative;
-            overflow: hidden;
-        }
-
-        body::before {
-            content: '';
-            background: url('assets/imagenes/5437842.jpg') center/cover no-repeat; /* Cambia 'tu_imagen.jpg' por la ruta de tu imagen de fondo */
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            z-index: -1;
-        }
-
-        .color-superpuesto {
-            position: relative;
-            z-index: 1;
-            background-color: rgba(0, 0, 2, 0.5); /* Ajusta el valor alpha (último número) según la opacidad deseada y el color deseado */
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            color: white; /* Cambia el color del texto según sea necesario */
-        }
-    </style>
-    <title>Color sobre Imagen de Fondo</title>
+    <title>Alejandro Cubillo - Portafolio</title>
+    <link rel="stylesheet" href="assets/Stylesprueba.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div class="color-superpuesto">
-        <h1>Contenido con Color</h1>
-        <p>Este es un ejemplo de contenido con un color superpuesto sobre una imagen de fondo.</p>
+<body class="grid-container">
+
+
+<!-- Barra de navegación -->
+    <nav class="navbar">
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-list">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#acerca-de-mi">Acerca de Mí</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#portafolio">Portafolio</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>      
+    
+    
+    <!-- Contenido del portafolio --> 
+    <header class="header"> <!-- titlefodo-superpuesto    color-superpuesto content -->
+        <h1>Hi 👋, I'm Alejandro</h1>
+        <img class="imagen-redonda centrar-imagen" src="assets/imagenes/WhatsApp Image 2023-12-17 at 14.44.39.jpeg" alt="Imagen Redonda" height="200"   width="200" />
+        <p class="title">Desarrollador Web</p>
+    </header>
+    <!--horizontal divider(gradiant)-->
+    
+    
+        
+    <header class="header2">
+        <h1>Alejandro Cubillo Steller</h1>
+    <br>
+    
+
+        <article class="header2 h">
+            <!-- Sección acerca de mí -->
+            <section id="acerca-de-mi">
+                 <h2>About Me - Acerca de Mí</h2>
+                <p>Información personal y profesional.</p>
+                <p class="estilo-1">Hi 👋, I'm Alejandro</p>
+                <p>🎧 Rock & Metal enthusiast 🧙‍♂️ Harry Potter fanatic - 📚Book Reader - ☕ Coffee addict - 🧉 Mate Lover</p>
+                <p>🧑‍💻 I have degrees or certifications and studies in officetool packages and various knowledge in programming languages and servers.</p>
+                <img class="imagen-me centrar-imagen" src="assets/imagenes/WhatsApp Image 2023-12-29 at 13.37.17.jpeg" alt="Imagen me" height="200"   width="200" />
+            </section>
+    </header>
+    <br>
+    <br>
+
+
+
+    <aside class="sidebar">
+       <!-- Contenido de la página de habilidades -->
+       <section id="habilidades">
+           <h1>Mis Habilidades y Lenguajes de Programación</h1>
+       
+           <div class="habilidad">
+               <h2>Desarrollo Web</h2>
+               <h3>I have experience with these technologies</h3>
+               <img align="center" src="assets/imagenes/icons8-html-5-96.png" alt="HTML5" height="50" width="50" />
+               <img align="center" src="assets/imagenes/icons8-css-96.png" alt="CSS" height="50" width="50" />
+               <img align="center" src="assets/imagenes/js.png" alt="JavaScript" height="50" width="50" />
+               <img align="center" src="assets/imagenes/icons8-php-50.png" alt="PHP" height="50" width="50" />
+               <img align="center" src="assets/imagenes/wordpress.png" alt="wordpress" height="50" width="50" />
+
+
+               <p>HTML, CSS, JavaScript, PHP, wordpress</p>
+           </div>
+       
+           <div class="habilidad">
+               <h2>Bases de Datos</h2>
+               <h3>I have experience with these technologies</h3>
+               <img align="center" src="assets/imagenes/mysql.png" alt="MySQL" height="50" width="50" />
+               <img align="center" src="assets/imagenes/icons8-maria-db-96.png" alt="MariaDB" height="50" width="50" />
+               <img align="center" src="assets/imagenes/postgre.png" alt="Postgres" height="50" width="50" />
+               <img align="center" src="assets/imagenes/icons8-mongo-db-96.png" alt="MongoDB" height="50" width="50" />
+
+               <p>MySQL, MariaDB, Postgres, MongoDB</p>
+           </div>
+       
+           <div class="habilidad">
+               <h2>Otros Lenguajes de Programación</h2>
+               <h3>I have experience with these technologies</h3>
+               <img align="center" src="assets/imagenes/mysql.png" alt="Python" height="50" width="50" />
+               <img align="center" src="assets/imagenes/icons8-potencia-shell-96.png" alt="Powershell" height="50" width="50" />
+               <img align="center" src="assets/imagenes/icons8-intento-96.png" alt="Bash" height="50" width="50" />
+               <img align="center" src="assets/imagenes/icons8-git-96.png" alt="Git" height="50" width="50" />
+               <img align="center" src="assets/imagenes/github.png" alt="Github" height="50" width="50" />
+               <p>Python, Powershell, Bash, Git, Github</p>
+           </div>
+
+           <div class="habilidad">
+               <h2>Sistemas Operativos</h2>
+               <h3>I have experience with these technologies</h3>
+               <img align="center" src="assets/imagenes/microsoft.png" alt="Windows" height="50" width="50" />
+               <img align="center" src="assets/imagenes/ubuntu.png" alt="Linux Ubuntu" height="50" width="50" />
+               <p>Windows OS, Linux Ubuntu Distro</p>
+           </div>
+            
+            <!-- Puedes agregar más secciones según tus habilidades -->
+            <!--tech stack icons-->
+            <p align="center">
+            <a href="https://skillicons.dev">
+              <img src="https://skillicons.dev/icons?i=powershell,html,css,js,php,mysql,mongodb,postgres,wordpress,discord,vscode,py,git,github,bash,linux&perline=5" height="50" width="50" />
+            </a>
+            </p>
+        </section>
+    </aside>
+
+    
+    <main class="main">
+        <!-- Resto del contenido del portafolio aquí -->
+        <article class="article">
+        <!-- Sección de inicio -->
+        <section id="inicio">
+            <h1>Welcome to my Portfolio - Bienvenido a mi Portafolio</h1>
+            <p>Descripción breve sobre quién eres y qué haces.</p>
+            <p class="estilo-2">👨‍🎓 I am a graduated administrator with expertise inaccounting,finance, statistics, process analysis,organizational analysis, projectmanagement, organizationalprospective analysis, information systemsmanagement, with anemphasis on public administration and businessmanagement.</p>
+        </section>
+        <br>
+        <br>
+        <article class="article">
+            <!-- Imagen en el cuerpo del proyecto -->
+            <img src="assets/imagenes/WhatsApp Image 2023-12-04 at 23.39.06.jpeg"alt="Cerro de Monserrate-Bogota,Colombia" eight="450" width="450" >
+        </article>
+
+    </main>
+    
+
+    <br>
+    <br>
+    <header class="header3"> 
+        <H2>Introduce my proyects</H2>
+    </header>
+    <div class="related-post-1">
+        <!-- Sección de portafolio -->
+        <section id="portafolio">
+            <h2>Portafolio</h2>
+            <!-- Aquí puedes incluir tus proyectos con imágenes, descripcionesy enlaces. -->
+        </section>
+    </div>        
+            
+            
+    <div class="related-post-2">
+        <p align="center">Another Post</p>
     </div>
+    <div class="related-post-3">
+        <p align="center">Another Post</p>
+    </div>
+            
+    <div class="related-post-4">
+        <p align="center">Another Post</p>
+    </div>
+            
+    <div class="related-post-5">
+        <p align="center">Another Post</p> 
+    </div>
+    
+    <div class="related-post-6">
+        <p align="center">Another Post</p> 
+    </div>
+    
+    <div class="related-post-7">
+        <!-- Sección de blog -->
+        <section id="blog">
+            <h2>Blog</h2>
+            <br>
+            <br>
+            <!-- Aquí puedes incluir tus publicaciones de blog. -->
+            <a href="https://www.linkedin.com/in/  alejandro-cubillo-steller-848361a7" target="blank"><img  align="center" src="assets/imagenes/blog.png" alt="blog" height="50" width="50" /></a>
+        </section>
+    </div>
+    
+    <footer class="footer">
+        <!-- Sección de contacto -->
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Formulario de contacto o información de contacto.</p>
+            <p>¡Me encantaría saber de ti!Completa el formulario o utiliza losdetalles decontacto a continuación.</p>
+        
+            <!-- Formulario de contacto -->
+            <form id="contacto-formulario" method="post">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+        
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+        
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+        
+                <button type="button" onclick="enviarFormulario()">EnviarMensaje</button>
+            </form>
+        </section>
+        
+        <br>
+        <br>
+        <br>
+    
+        <!-- Información de contactoadicional -->
+        <div id="informacion-contacto">
+            <h3>Información de contacto</h3>
+            
+            <p>Connect With Me🤝</p>
+            <br>
+            <!--icons and links-->
+            <p align="center">
+            <a href="https://www.linkedin.com/inalejandro-cubillo-steller-848361a7/" target="blank"><img  align="center" src="assets/imagenes/linkedin.png" alt="linkedin" height="50" width="50" /></a>
+            <a href="https://twitter.com/" target="blank"><img align="center"  src="assets/imagenes/gorjeo.png" alt="twitter" height="50"   width="50" /></a> 
+            <a href="https://www.instagram.com/cubilloalejandro/"  target="blank"><img align="center" src="assets/imagenes/instagram.png" alt="twitter" height="50" width="50" /></a>
+            <a href="https://discord.com/channels/817106410314792970817106410314792974" target="blank"><img align="center" src="assets/imagenes/discord.png" alt="discord" height="50" width="50" /></a>
+            <a href="https://github.com/KubDroid" target="blank"><img  align="center" src="assets/imagenes/github.png" alt="github" height="50" width="50" /></a>
+            <a href="mailto:ale.cubillo@gmail.com"><img align="center" src="assets/imagenes/gmail.png" alt="mailto" height="50"width="50" /    ></a>
+            <a href="https://wa.me/+50688849725" target="_blank"><img  align="center" src="assets/imagenes/whatsapp.png" alt="whatsapp" height="50" width="50" /></a>
+            </p>
+        </div>
+        <br>
+        <br>
+        <br>
+         <div>
+            <h4>© 2020 - 2023 | Todos losderechos reservados.</h4>
+            <p>Personal Profile by Kub.</p>
+            
+         </div>
+    </footer>
+
+
+    <!-- Script para animaciones o interactividad -->
+    <script src="assets/scripts.js"></script>
+</body>
+</html>
 </body>
 </html>
