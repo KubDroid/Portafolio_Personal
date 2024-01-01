@@ -220,6 +220,11 @@ body {
             grid-area: image-me;
         }
 
+        .imagen-main {
+            display: block;
+            margin: auto;
+        }
+
                 /* Estilos del formulario de contacto */
         #contacto-formulario {
             max-width: 400px;
