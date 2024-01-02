@@ -54,8 +54,9 @@ body {
         .header2 {
             grid-area: header2;
             background-color: rgba(103, 93, 241, 0.74);
+            justify-content: stretch;
             align-items: center;
-            justify-content: center;
+
         }
 
         .header3 {
@@ -181,10 +182,7 @@ body {
                 
         }
 
-        .header2.h {
-            display: flex;
-            align-items: stretch;
-            justify-content: space-between;
+        .header2 {
             text-align: left;
         }
 
@@ -214,10 +212,7 @@ body {
         }
 
         .imagen-me {
-
-            display: flex;
-
-            grid-area: image-me;
+            float: right;
         }
 
         .imagen-main {
