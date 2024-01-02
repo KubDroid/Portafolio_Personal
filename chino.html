@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /* Esto es para el cuerpo  */
+        .title {
+            grid-area: header;
+        }
+
+        .menu {
+            grid-area: menu;
+        }
+
+        .acercaDeMi {
+            grid-area: main;
+        }
+
+        .habilidades {
+            grid-area: right;
+        }
+
+        .footer {
+            grid-area: footer;
+        }
+
+        .projects {
+            grid-area: projects;
+        }
+
+
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                'menu header header header header header'
+                'menu main main main right right'
+                'menu projects projects projects projects projects'
+                'menu footer footer footer footer footer';
+            gap: 10px;
+            background-color: #bababa;
+            padding: 10px;
+        }
+
+        .grid-container>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            /* padding: 20px 0; */
+            font-size: 30px;
+        }
+
+        /* Esto es para mis habilidades */
+        .habilidades {
+            text-align: center;
+        }
+
+        .habilidad {
+            margin-bottom: 20px;
+        }
+
+        .skill-icons img {
+            width: 50px;
+            /* Adjust the size as needed */
+            height: 50px;
+            margin: 5px;
+            /* Adjust the spacing between icons */
+        }
+
+        /* Additional styling for headings and paragraphs */
+        .habilidad h2 {
+            color: #333;
+        }
+
+        .habilidad h3 {
+            color: #666;
+            font-style: italic;
+        }
+
+        .habilidad p {
+            color: #444;
+        }
+
+        /* Esto es para el menu*/
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px;
+        }
+
+        .nav-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: block;
+        }
+
+        .nav-list li {
+            margin-right: 20px;
+        }
+
+        .nav-list a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        .burger-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .bar {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 5px 0;
+        }
+
+        @media (max-width: 768px) {
+            .nav-list {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: #333;
+            }
+
+            .nav-list.show {
+                display: flex;
+            }
+
+            .burger-menu {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="grid-container">
+        <div class="title">Alejandro Cubillo Steller</div>
+
+        <div class="menu">
+            <div class="navbar">
+                <div class="burger-menu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <script src="chino.js"></script>
+        </div>
+
+        <div class="acercaDeMi">
+            <section>
+                <h2>About Me - Acerca de Mí</h2>
+                <p>Información personal y profesional.</p>
+            </section>
+
+            <section>
+                <h3>Greetings</h3>
+                <p>Hi 👋, I'm Alejandro</p>
+            </section>
+
+            <section>
+                <h3>Interests</h3>
+                <p>🎧 Rock & Metal enthusiast 🧙‍♂️ Harry Potter fanatic - 📚 Book Reader - ☕ Coffee addict - 🧉 Mate
+                    Lover</p>
+            </section>
+
+            <section>
+                <h3>Professional Background</h3>
+                <p>🧑‍💻 I have degrees or certifications and studies in office tool packages and various knowledge in
+                    programming languages and servers.</p>
+            </section>
+        </div>
+
+        <div class="habilidades">
+            <h1>Mis Habilidades y Lenguajes de Programación</h1>
+
+            <!-- Skill Section: Desarrollo Web -->
+            <div class="habilidad">
+                <h2>Desarrollo Web</h2>
+                <h3>I have experience with these technologies</h3>
+                <div class="skill-icons">
+                    <img src="assets/imagenes/icons8-html-5-96.png" alt="HTML5" />
+                    <img src="assets/imagenes/icons8-css-96.png" alt="CSS" />
+                    <img src="assets/imagenes/js.png" alt="JavaScript" />
+                    <img src="assets/imagenes/icons8-php-50.png" alt="PHP" />
+                    <img src="assets/imagenes/wordpress.png" alt="WordPress" />
+                </div>
+                <p>HTML, CSS, JavaScript, PHP, WordPress</p>
+            </div>
+
+            <!-- Skill Section: Bases de Datos -->
+            <div class="habilidad">
+                <h2>Bases de Datos</h2>
+                <h3>I have experience with these technologies</h3>
+                <div class="skill-icons">
+                    <img src="assets/imagenes/mysql.png" alt="MySQL" />
+                    <img src="assets/imagenes/icons8-maria-db-96.png" alt="MariaDB" />
+                    <img src="assets/imagenes/postgre.png" alt="Postgres" />
+                    <img src="assets/imagenes/icons8-mongo-db-96.png" alt="MongoDB" />
+                </div>
+                <p>MySQL, MariaDB, Postgres, MongoDB</p>
+            </div>
+
+            <!-- Skill Section: Otros Lenguajes de Programación -->
+            <div class="habilidad">
+                <h2>Otros Lenguajes de Programación</h2>
+                <h3>I have experience with these technologies</h3>
+                <div class="skill-icons">
+                    <img src="assets/imagenes/python.png" alt="Python" />
+                    <img src="assets/imagenes/icons8-potencia-shell-96.png" alt="Powershell" />
+                    <img src="assets/imagenes/icons8-intento-96.png" alt="Bash" />
+                    <img src="assets/imagenes/icons8-git-96.png" alt="Git" />
+                    <img src="assets/imagenes/github.png" alt="GitHub" />
+                </div>
+                <p>Python, Powershell, Bash, Git, GitHub</p>
+            </div>
+
+            <!-- Skill Section: Sistemas Operativos -->
+            <div class="habilidad">
+                <h2>Sistemas Operativos</h2>
+                <h3>I have experience with these technologies</h3>
+                <div class="skill-icons">
+                    <img src="assets/imagenes/microsoft.png" alt="Windows" />
+                    <img src="assets/imagenes/ubuntu.png" alt="Linux Ubuntu" />
+                </div>
+                <p>Windows OS, Linux Ubuntu Distro</p>
+            </div>
+
+            <!-- Tech Stack Icons -->
+            <p align="center">
+                <a href="https://skillicons.dev">
+                    <img src="https://skillicons.dev/icons?i=powershell,html,css,js,php,mysql,mongodb,postgres,wordpress,discord,vscode,py,git,github,bash,linux&perline=5"
+                        height="50" width="50" />
+                </a>
+            </p>
+        </div>
+
+        <div class="projects">
+            <h2>Proyectos</h2>
+            <p>Proyectos personales y profesionales.</p>
+            </section>
+
+        </div>
+
+        <div class="footer">
+            <section id="contacto">
+                <h2>Contacto</h2>
+                <p>Formulario de contacto o información de contacto.</p>
+                <p>¡Me encantaría saber de ti! Completa el formulario o utiliza los detalles de contacto a continuación.
+                </p>
+
+                <!-- Formulario de contacto -->
+                <form id="contacto-formulario" method="post">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" required></textarea>
+
+                    <button type="button" onclick="enviarFormulario()">Enviar Mensaje</button>
+                </form>
+
+                <!-- Información de contacto adicional -->
+                <div id="informacion-contacto">
+                    <h3>Información de contacto</h3>
+                    <p>Connect With Me🤝</p>
+
+                    <!-- Icons and links -->
+                    <p align="center">
+                        <a href="https://www.linkedin.com/in/alejandro-cubillo-steller-848361a7/" target="_blank"><img
+                                align="center" src="assets/imagenes/linkedin.png" alt="linkedin" height="50"
+                                width="50" /></a>
+                        <a href="https://twitter.com/" target="_blank"><img align="center"
+                                src="assets/imagenes/gorjeo.png" alt="twitter" height="50" width="50" /></a>
+                        <a href="https://www.instagram.com/cubilloalejandro/" target="_blank"><img align="center"
+                                src="assets/imagenes/instagram.png" alt="instagram" height="50" width="50" /></a>
+                        <a href="https://discord.com/channels/817106410314792970/817106410314792974"
+                            target="_blank"><img align="center" src="assets/imagenes/discord.png" alt="discord"
+                                height="50" width="50" /></a>
+                        <a href="https://github.com/KubDroid" target="_blank"><img align="center"
+                                src="assets/imagenes/github.png" alt="github" height="50" width="50" /></a>
+                        <a href="mailto:ale.cubillo@gmail.com"><img align="center" src="assets/imagenes/gmail.png"
+                                alt="mailto" height="50" width="50" /></a>
+                        <a href="https://wa.me/+50688849725" target="_blank"><img align="center"
+                                src="assets/imagenes/whatsapp.png" alt="whatsapp" height="50" width="50" /></a>
+                    </p>
+
+                    <div>
+                        <h4>© 2020 - 2023 | Todos los derechos reservados.</h4>
+                        <p>Personal Profile by Kub.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+</body>
+
+</html>
