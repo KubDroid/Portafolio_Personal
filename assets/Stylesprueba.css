@@ -104,37 +104,37 @@ body {
 
         /* Define las posiciones individuales en la cuadrícula */
         .related-post-1 {
-            grid-row: 5; /* Primera fila */
-            grid-column: 2;
+            grid-row: 7; /* Primera fila */
+            grid-column: 1;
         }
 
         .related-post-2 {
-            grid-row: 5; /* Segunda fila */
-            grid-column: 3;
+            grid-row: 8; /* Segunda fila */
+            grid-column: 1;
         }
 
         .related-post-3 {
-            grid-row: 5; /* Segunda fila */
-            grid-column: 4;
+            grid-row: 9; /* Segunda fila */
+            grid-column: 1;
         }
         .related-post-4 {
-            grid-row: 5; /* Segunda fila */
-            grid-column: 5;
+            grid-row: 10; /* Segunda fila */
+            grid-column: 1;
         }
 
         .related-post-5 {
-            grid-row: 5; /* Segunda fila */
-            grid-column: 6;
+            grid-row: 11; /* Segunda fila */
+            grid-column: 1;
         }
 
         .related-post-6 {
-            grid-row: 6; /* Segunda fila */
-            grid-column: 2;
+            grid-row: 12; /* Segunda fila */
+            grid-column: 1;
         }
 
         .related-post-7 {
-            grid-row: 6; /* Segunda fila */
-            grid-column: 3;
+            grid-row: 13; /* Segunda fila */
+            grid-column: 1;
         }
 
         .related-post-1:hover, 
@@ -153,7 +153,7 @@ body {
             grid-area: footer;
             background: #12203E;
 	        color: #ffffff;
-            grid-row: 7; /* Segunda fila */
+            grid-row: 14; /* Segunda fila */
         }
 
         @media (min-width:768px) {
@@ -168,6 +168,45 @@ body {
                 "footer footer" auto/
                 auto auto;
                 
+                /* Define las posiciones individuales en la cuadrícula */
+
+                .related-post-1 {
+                    grid-row: 5; /* Primera fila */
+                    grid-column: 1;
+                }
+                
+                .related-post-2 {
+                    grid-row: 5; /* Primera fila */
+                    grid-column: 2;
+                }
+
+                .related-post-3 {
+                    grid-row: 6; /* Segunda fila */
+                    grid-column: 1;
+                }
+                .related-post-4 {
+                    grid-row: 6; /* Segunda fila */
+                    grid-column: 2;
+                }
+        
+                .related-post-5 {
+                    grid-row: 7; /* Segunda fila */
+                    grid-column: 1;
+                }
+        
+                .related-post-6 {
+                    grid-row: 7; /* Segunda fila */
+                    grid-column: 2;
+                }
+        
+                .related-post-7 {
+                    grid-row: 8; /* Segunda fila */
+                    grid-column: 1;
+                }
+
+                .footer {
+                    grid-row: 9;
+                }
         }
         @media (min-width:992px) {
             grid-template:
@@ -180,6 +219,45 @@ body {
                 ". footer footer footer footer footer" auto/
                 auto auto auto auto auto auto;
                 
+                /* Define las posiciones individuales en la cuadrícula */
+                .related-post-1 {
+                    grid-row: 5; /* Primera fila */
+                    grid-column: 2;
+                }
+            
+                .related-post-2 {
+                    grid-row: 5; /* Segunda fila */
+                    grid-column: 3;
+                }
+            
+                .related-post-3 {
+                    grid-row: 5; /* Segunda fila */
+                    grid-column: 4;
+                }
+                .related-post-4 {
+                    grid-row: 5; /* Segunda fila */
+                    grid-column: 5;
+                }
+            
+                .related-post-5 {
+                    grid-row: 5; /* Segunda fila */
+                    grid-column: 6;
+                }
+            
+                .related-post-6 {
+                    grid-row: 6; /* Segunda fila */
+                    grid-column: 2;
+                }
+            
+                .related-post-7 {
+                    grid-row: 6; /* Segunda fila */
+                    grid-column: 3;
+                }
+
+                .footer {
+                    grid-row: 7;
+                }
+
         }
 
         .header2 {
