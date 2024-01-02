@@ -33,6 +33,7 @@ body {
     gap: 8px;
     padding: 4px;
     height: auto;
+    width: fit-content;
     grid-auto-rows: auto;
     grid-template:
         "header" auto
@@ -291,6 +292,7 @@ body {
 
         .imagen-me {
             float: right;
+            margin-left: 10px;
         }
 
         .imagen-main {
